@@ -1,9 +1,164 @@
-<html>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>My Cheatsheet</title>
+      <link rel="stylesheet" href="./styles.css">
+      <link rel="stylesheet" href="<link rel="preconnect" href=https://fonts.googleapis.com>
+      <link rel="preconnect" href=https://fonts.gstatic.com crossorigin>
+      <link href=https://fonts.googleapis.com/css2?family=Paprika&display=swap rel="stylesheet">
+</head>
+<!-- Color guide - (dusty rose 220, 174, 150) (olive green 112, 130, 56)-->
 <body>
-  <h1>YOUR NAME</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+
+    <div class="myheader">
+     <header>
+           <h1>Mandy's How-To guide on CSS Rules</h1>
+            <h5>created by Mandy Wadley</h5>
+     </header>
+    </div>
+    <div>
+        <h2>Selectors</h2>
+     <table>
+           <thead>
+                 <tr>
+                       <th class="heading" scope="col" colspan="4">Selectors</th>
+                 </tr>
+                 <tr>
+                       <th class="heading order" scope="row">Order Number</th>
+                       <th class="heading" scope="row">Selector</th>
+                       <th class="heading" scope="row">Description</th>
+                       <th class="heading" scope="row">Detail</th>
+                 </tr>
+                 <tr>
+                       <th class="heading order" colspan="4">If there is more than one  set of rules that apply to an element then the rule of specificity and cascading will determine which styling to use</td>
+                 </tr>
+           </thead>
+           <tbody>
+                  <tr class="odd">
+                        <td class="order">#1</td>
+                        <td class="selector">Important</td>
+                        <td>Applied after any value to indicate that it should be more important than other rules that apply to this element</td>
+                        <td>Add "!Important" after an element to indicate that it should overrule any other styling. <span class="example">Use sparingly.</span></td>
+
+                  </tr>
+                 <tr class="even">
+                       <td class="order">#2</td>
+                       <td class="selector">ID Selector</td>
+                       <td>Matches an element assigned an "ID" name in HTML</td>
+                       <td>
+                             <ul>
+                                   <li>Represented by the HASH symbol "#"</li>
+                                   <li>Highest ranking in stling</li> 
+                             </ul>
+                       </td>
+                 </tr>
+                 <tr class="odd">
+                        <td class="order">#3</td>
+                        <td class="selector">Class Selector</td>
+                        <td>Matches an element assigned an "Class" name in HTML</td>
+                        <td>
+                        <ul>
+                              <li>Represented by the period symbol "." also referred to as the full stop symbol</li>
+                              <li><span class="example">Example:</span> ".note". This would apply to any line of code that is identified as "class='note'" </li>
+                              <li>More specific to apply style to a class inside of a type use the type full stop symbol and class name. <span class="example">Example:</span> "p.note". This would apply to class of note inside a paragraph type.</li>
+                             
+                        </ul>
+                        </td>
+                 </tr>           
+                 <tr class="even">   
+                       <td class="order">#4</td>
+                       <td class="selector">Type Selector</td>
+                       <td>Applies style to types of HTML elements such as h1 and p</td>
+                       <td>
+                             <ul>
+                                   <li><span class="example">Example:</span> h1 type would apply styling to all h1 types that do not have a class or id where there is already a more specific styling applied </li>
+                                   <li>Can apply styling to multiple types at one time by adding each type followed by a space <span class="example">Example: h1 p </span> this would apply to all h1 and p types</li>
+                             </ul>
+                       </td>
+                  </tr>
+                 <tr class="odd">
+                       <td class="order">#5</td>
+                       <td class="selector">Child Selector</td>
+                       <td>An element that is the child of another element</td>
+                       <td><span class="example">Example:</span> "li>a" targets any a element that is the child of an li element but not other a elements in the page</td>
+                 </tr>
+                 <tr class="even">
+                       <td class="order">#6</td>
+                       <td class="selector">Descendant Selector</td>
+                       <td>Targets all elements that fall under the selector of the type.</td>
+                       <td><span class="example">Example:</span> p a will target an a element that sits inside a p element. Even if there are other elements nested between them.</td>
+                 </tr>
+                 <tr class="odd">
+                       <td class="order">#7</td>
+                       <td class="selector">Adjacent Sibling Selector</td>
+                       <td>Targets an element that is the next sibling of another</td>
+                       <td><span class="example">Example:</span> h1+p will target the first p element after any h1 element but not other p elements</td>
+                 </tr>
+                 <tr class="even">
+                       <td class="order">#8</td>
+                       <td class="selector">General Sibling Selector</td>
+                       <td>Targets an element that is a sibling of another, although it does not have to be the direct preceding element.</td>
+                       <td><span class="example">Example: </span>h1~p would target any p element that followed an h1 element.</td>
+                 </tr>
+                 <tr class="odd">
+                       <td class="order">#9</td>
+                       <td class="selector">Last Selector</td>
+                       <td>If the two selectors are identical the last selecter will take precedence.</td>
+                       <td>Allow Cascading to assist with specificity over using the important selector. Use previous specificity guideline to style a page.</td>
+                 </tr>
+                 <tr class="even">
+                       <td class="order">#10</td>
+                       <td class="selector">Universal selector</td>
+                       <td>Applies to all elements on a page or document. Represented by the asterisk or "*" symbol</td>
+                       <td><span class="example">Example: </span> * {} targets all elements on the page.</td>
+                 </tr>
+                 
+           </tbody>
+     </table>
+    </div>
+    <div>
+     <h2>Cascading</h2>
+     <table>
+           <thead>
+                 <tr>
+                       <th class="heading" scope="col" colspan="3">Cascading Rules</th>
+                 </tr>
+                 <tr>
+                     <th class="heading" scope="col">Rule</th>
+                     <th class="heading" scope="col">Detail</th>
+                     <th class="heading" scope="col">Example</th>
+                 </tr>
+           </thead>
+           <tbody>
+               <tr class="odd">
+                   <td>Last</td>
+                   <td>If two selectors are identical, the latter of the two will take precedence.</td>
+                   <td>If there are two p selectors, the last p style will apply to the element</td>
+               </tr>
+               <tr class="even">
+                   <td>Specificity</td>
+                   <td>If one selector is more specific than others, the more specific rule will take precedence over more general ones.</td>
+                   <td>h1 is more specific than *, p b is more specific than p, p#intro is more specific than p.
+                   </td>
+               </tr>
+               <tr class="odd">
+                   <td>Important</td>
+                   <td>You can add !important after any property value to indicate that it should be considered more important than other rules that apply to the same element.</td>
+                   <td>background-color: blue !important;</td>
+               </tr>
+           </tbody>
+           <tfoot>
+               <tr>
+                   <td class="foot" scope="col" colspan="3">Use !important as little as possible. Try using specificity and cascading to style a page before turning to !imporant.</td>
+
+                </tr>
+           </tfoot>
+     </table>
+    </div>
 </body>
- 
 </html>
+
+
